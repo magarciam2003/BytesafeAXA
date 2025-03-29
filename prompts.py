@@ -43,8 +43,8 @@ Reseña: {{review}}
 def get_summary_prompt():
     prompt = """Eres un modelo avanzado de lenguaje. Tu tarea es analizar una lista de opiniones (reviews) y generar un JSON con dos campos:
 
-1. "summary": Un resumen conciso y claro que sintetice las ideas principales de todas las opiniones proporcionadas.
-2. "top_keywords": Una lista de las palabras o frases clave más relevantes y repetidas en las opiniones.
+1. "resumen": Un resumen conciso y claro que sintetice las ideas principales de todas las opiniones proporcionadas.
+2. "palabras_frecuentes": Una lista de las palabras o frases clave más relevantes y repetidas en las opiniones.
 
 Las palabras clave deben ser significativas y relacionadas directamente con el contenido de las opiniones, excluyendo palabras comunes como "y", "el", "de", etc.
 
@@ -64,8 +64,8 @@ Review: El modelo debería devolver algo como esto:
 
 json
 {
-  "summary": "La mayoría de los usuarios consideran que el producto es excelente, fácil de usar y muy útil. Algunos mencionan buena calidad, aunque hay expectativas mixtas sobre este aspecto.",
-  "top_keywords": ["útil", "fácil de usar", "calidad", "excelente", "producto"]
+  "resumen": "La mayoría de los usuarios consideran que el producto es excelente, fácil de usar y muy útil. Algunos mencionan buena calidad, aunque hay expectativas mixtas sobre este aspecto.",
+  "palabras_frecuentes": ["útil", "fácil de usar", "calidad", "excelente", "producto"]
 }
 
 Lista de reviews:
