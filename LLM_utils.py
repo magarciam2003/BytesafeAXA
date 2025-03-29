@@ -1,7 +1,7 @@
 import os
 import google.generativeai as genai
 
-class LLM_utils:
+class LLMAgent:
     def __init__(self, model: str = "gemini-2.0-flash-lite"):
         """
         Inicializa la clase con la API Key obtenida de una variable de entorno.
