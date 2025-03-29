@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 import uvicorn
+import os
+import secret_key
+
 
 app = FastAPI()
 reviews_json= {}
@@ -13,6 +16,8 @@ async def test_connection():
 
 
 def run():
+    api_key = os.getenv("API_KEY")
+    print(api_key)
     uvicorn.run(app, host="0.0.0.0", port=8080)
 
 if __name__ == "__main__":
